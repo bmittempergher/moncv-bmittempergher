@@ -1,0 +1,18 @@
+#etu, #com, #form {
+    background-color: #222222;
+    border-color: #080808;
+}
+
+#exp, #int {
+    
+}
+
+.navbar-inverse {
+    background-color: #444444;
+    border-color: #080808;
+}
+
+section{
+    padding-top: 150px;
+    height: 750px;
+}
