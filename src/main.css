@@ -1,4 +1,4 @@
-#etu, #com, #form {
+/*#etu, #com, #form {
     background-color: #222222;
     border-color: #080808;
 }
@@ -10,9 +10,21 @@
 .navbar-inverse {
     background-color: #444444;
     border-color: #080808;
-}
+} */
 
 section{
     padding-top: 160px;
     height: 800px;
+}
+
+.form-control {
+    width: 70%;
+}
+
+.glyphicon {
+    padding-left: 20px;
+}
+
+.panel {
+    margin-bottom: 0px;
 }
