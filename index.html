@@ -44,28 +44,27 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Recherche">
-						</div>
-						<button type="submit" class="btn btn-default">
-							<span class="glyphicon glyphicon-search"></span>
-						</button>
-					</form>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Recherche">
+							</div>
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</form>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 </div>
-<hr>
 	<div class="container">
 		<section id="don">
-		    <table width="100%" class="table table-hover">			
+		    <table width="100%" class="table table-striped">			
                 <caption><h3 class="text-primary">Données personnelles</h3></caption>
                 <tr>
                     <th>Nom</th>
                     <td>Mittempergher</td>
-                    <td rowspan="7"><img src="./src/assets/logo.png" class="img-thumbnail center-block"></td>
+                    <td rowspan="7"><img src="static/img/logo.png" class="img-thumbnail center-block"></td>
                 </tr>
                 <tr> 
                     <th>Prénom</th>
@@ -98,7 +97,6 @@
       <div class="row">
 			<section id="etu">
 			<div class="container">
-			<hr>
 				<table width="100%" class="table table-hover">
 					<caption><h3 class="text-primary">Parcours scolaires</h3></caption>
 					<thead>
@@ -140,7 +138,7 @@
 		</section>
 		
 		<section id="exp">
-			<div class="container"><hr>
+			<div class="container">
 				<table width="100%" class="table table-hover">
 					<caption><h3 class="text-primary">Expériences professionelles</h3></caption>
 					<thead>
@@ -194,7 +192,7 @@
 		</section>
 		
 		<section id="com">
-			<div class="container"><hr>
+			<div class="container">
 				<table width="100%" class="table table-hover">
 					<caption><h3 class="text-primary">Compétences</h3></caption>
 					<thead>
@@ -276,7 +274,7 @@
 		</section>
 		
 		<section id="int">
-			<div class="container"><hr>
+			<div class="container">
 				<table width="100%" class="table table-hover">
 					<caption><h3 class="text-primary">Intérêts & passe-temps</h3></caption>
 					<thead>
@@ -304,8 +302,9 @@
 		</section>
 		
 		<section id="form">
-			<div class="container"><hr>
+			<div class="container">
 				<h3 class="text-primary">Formulaire de contact</h3>
+				<br><hr><br>
 				<form class="form-horizontal" method="POST" action="mailto:monemail@gmail.com" name="contact" enctype="text/plain"> 
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="nom">Nom : <span class="required">*</span></label>
@@ -331,6 +330,7 @@
 							<textarea id="commentaire" name="commentaire" placeholder="Vous pouvez laisser un commentaire" class="form-control"></textarea>
 						</div>
 					</div>
+					<br><br><hr><br>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary col-sm-6 col-xs-6">Envoyer</button>
 						<button type="reset" class="btn btn-warning col-sm-6 col-xs-6">Effacer</button>
