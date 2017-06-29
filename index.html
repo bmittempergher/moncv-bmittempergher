@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>moncv</title>
+    <title>Mon CV</title>
   </head>
   <body>
     <header class="container">
@@ -44,6 +44,11 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="#form">Contact</a></li>
+							<li>
+								<a href="#mark">
+									<span class="glyphicon glyphicon-star"></span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -161,7 +166,7 @@
       <div class="row">
 			<section id="etu">
 			<div class="container">
-				<table width="100%" class="table table-hover">
+				<table width="100%" id="tab-etu" class="table table-hover tablesorter">
 					<caption><h3 class="text-primary">Parcours scolaires</h3></caption>
 					<thead>
 						<tr>
@@ -261,36 +266,46 @@
 					<div class="col-md-12">
 						<h2 class="text-primary">Compétences</h2>
 					</div>
-				</div>
+				</div><hr>
 				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						Mathématique
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								Mathématique
+  							</div>
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="10" style="width:60%">
 								6 / 10 (Connaissances et facilités)
 							</div>
 						</div>
+					</div>				
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								Comptabilité
+  							</div>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						Comptabilité
-					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="10" style="width:80%">
 								8 / 10 (Connaissances scolaires et professionelles)
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><hr>
 				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						HTML, CSS, PHP
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								HTML, CSS, PHP
+  							</div>
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="8"
 							aria-valuemin="0" aria-valuemax="10" style="width:80%">
@@ -298,12 +313,14 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						SQL, PLSQL
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								SQL, PLSQL
+  							</div>
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="8"
 							aria-valuemin="0" aria-valuemax="10" style="width:80%">
@@ -311,12 +328,16 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div><hr>
 				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						JAVA
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								JAVA
+  							</div>
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="7"
 							aria-valuemin="0" aria-valuemax="10" style="width:70%">
@@ -324,12 +345,14 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						Logiciel microsoft (Word, Excel, Access...)
+					<div class="col-md-3 col-sm-6">
+						<div class="panel panel-perso">
+  							<div class="panel-heading">
+								Logiciel microsoft
+  							</div>
+						</div>
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-3 col-sm-6">
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="9"
 							aria-valuemin="0" aria-valuemax="10" style="width:90%">
@@ -377,19 +400,19 @@
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="nom">Nom : <span class="required">*</span></label>
 						<div class="col-sm-9">
-							<input type="text" id="nom" name="name" class="form-control" placeholder="Prénom & Nom" required="required"/>
+							<input type="text" id="nom" name="name" class="form-control" placeholder="Prénom & Nom" required/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-3" for="soc">Société : <span class="required">*</span></label>
+						<label class="control-label col-sm-3" for="soc">Société : </label>
 						<div class="col-sm-9">
-							<input type="text" id="soc" name="Raison sociale" class="form-control" placeholder="Raison sociale" required="required"/>
+							<input type="text" id="soc" name="Raison sociale" class="form-control" placeholder="Raison sociale" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-3" for="email">E-mail : <span class="required">*</span></label>
 						<div class="col-sm-9">
-							<input type="email" id="email" name="email" class="form-control" placeholder="adresse@example.com" required="required" />
+							<input type="email" id="email" name="email" class="form-control" placeholder="adresse@example.com" required/>
 						</div>
 					</div>
 					<div class="form-group">
@@ -404,6 +427,21 @@
 						<button type="reset" class="btn btn-warning col-sm-6 col-xs-6">Effacer</button>
 					</div>
 				</form>
+				<script>
+					$("form").validate();
+				</script>
+			</div>
+		</section>
+
+		<section id="mark">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-10 col-xs-offset-1">
+						<div data-zoom="4" role="map" class="gmaps">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10885.472729931587!2d6.95046835!3d46.993743200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sch!4v1498746328339" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
     <div id="app"></div>
