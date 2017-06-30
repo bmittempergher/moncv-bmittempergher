@@ -1,15 +1,29 @@
 import $ from 'jquery';
 import Chart from 'chart.js';
+import 'jquery-colorbox';
+import 'jquery-colorbox/jquery.colorbox-min.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootswatch/readable/bootstrap.min.css';
 import './main.css';
-import 'jquery-gmaps';
 
 $(document).ready(() => {
     // Appel de la fonction pour afficher des chart au lieu des progress-bar
     transformPage();
-    $('#map').gmaps();
+    // Crée une gallerie avec les photos de class gallery
+    $('a.gallery').colorbox({
+        opacity: 0.7,
+        rel: 'group1',
+        previous: '<button class="btn btn-primary"><span class="glyphicon glyphicon-backward"></span></button>',
+        next: '<button class="btn btn-primary"><span class="glyphicon glyphicon-forward"></span></button>',
+        close: '<button class="btn btn-primary"><span class="glyphicon glyphicon-remove-circle"></span></button>',
+        maxWidth: '80%',
+        maxHeight: '80%',
+        scalePhotos: true,
+        current: function () {
+            var url = $(this).attr('href');
+            return '<a href="' + url + '"  class="btn  btn-primary" target="_blank"><span class="glyphicon glyphicon-comment"></span></a>';
+        }});
 });
 
 // Recherche des éléments avec la class progress
