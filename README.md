@@ -1,17 +1,23 @@
 # moncv-bmittem
 
-> A Vue.js project
+> Ce projet est ...
 
 ## Outils
 
 * Visual Studio Code
-* GitHub
-* GitShell
+    * [Lien VSC](https://code.visualstudio.com/docs/setup/setup-overview)
+* GitHub Desktop + GitShell
+    * [Lien windows](https://windows.github.com)
+    * [Lien Mac](https://mac.github.com)
+* Google Chrome
 
 ## Mise en place de l'environement de développement
 
+Intaller les outils cités plus haut si ce n'est pas déjà fait.
+
 Télécharger et installer Node.js 
 * Il permet d'utiliser JavaScript en dehors du navigatueur
+* [Lien de téléchargement](https://nodejs.org/en/download/)
 
 
 ### 1. installer la vue-cli en global
@@ -20,7 +26,10 @@ Télécharger et installer Node.js
 ### 2. Utiliser vue init pour créer notre nouveau proget
     vue init webpack moncv
 
-### 3. Ouverture du project et installation des dépendances
+### 3. Ouverture du projet et installation des dépendances
+Pour ouvrir le projet, il faut se positionner sur le dossier de votre projet à l'intérieur de GitShell. Pour se faire utiliser les commandes de navigation `cd`. 
+Dans mon cas cela donne : `~\Documents\moncv-bmittem`
+
     code .
     npm install
 
@@ -103,7 +112,6 @@ git commit
 git push origin master
 
 ```
-
 ## Build Setup
 
 ``` bash
@@ -128,6 +136,10 @@ npm run deploy
 * Gérer des animations
 * L'utilisation d'Ajax 
 
+Dans ce projet 2 plugin jQuery ont été mis en place :
+* chart.js
+* jquery-colorbox.js
+
 ### Sélectionner un élément avec jQuery
 
 Sélectionner un élément via son ID
@@ -146,6 +158,59 @@ Sélectionner un élément via le selecteur CSS
 
     $('#myId ul.people li');
 
+### Le plugin Chart.js
+Il permet dans le cas de ce projet de remplacer les progress-bar obtenu via bootstrap par des graphiques en cercle.
+
+#### Mise en place
+1. Installation du plugin via npm
+    
+    npm install chart.js --save
+
+2. Importer la source dans notre **mains.js**
+
+    import Chart from 'chart.js';
+
+3. Configurer/paramétrer le plugin via des fonctions qui vont permettre de remplacer les progress-bar par les charts, sans toucher à notre **index.html**
+* Avant l'exécution des fonctions, il faut rechercher les éléments avec la class progress et les stocker dans une variable :  `let ListProg = $('.progress');`
+* `transformPage()`
+    * Boucle sur la liste `ListProg`
+    * Appel les deux autres fonctions pour chaque progress-bar
+    * Remplace le code HTML par un canvas (Le canvas permet de dessiner un graphique)
+* `extractDataFromProgressBar(progress)`
+    * Cherche la valeur de la progress-bar passée en paramètre
+    * Retourne la valeur trouvée
+* `drawChart(val, nbID)`
+    * Retrouve le canvas à l'aide de l'ID passé en parmettre (`nbID`)
+    * Crée le context qui accueillera le graphique
+    * Crée le nouveau chart en utilisant la valeur reçue (`val`)
+
+Toutes les progress-bars sont alors remplacées par un graphique (doughnut)
+
+### Le plugin jquery-colorbox.js
+Il permet de visualiser les images d'un même groupe dans une gallerie navigable (suivant, précédent,...)
+
+#### Mise en place
+1. Installation du plugin via npm
+    
+    npm install jquery-colorbox --save
+
+2. Importer la source dans notre **mains.js**
+
+    import 'jquery-colorbox.js';
+    import 'jquery-colorbox/jquery.colorbox-min.js';
+
+3. Configurer/paramétrer le plugin
+* Pour ce plugin les cibles choisies sont les liens (`<a>`) avec la class gallery (`... class="gallery" ...`)
+    * Pour ce plugin contrairement à celui vu précédemment, les éléments HTML sont juste ciblés à l'aide de la class `gallery` et non-remplacés à l'aide de fonctions JavaScript.
+* Cibler les éléments voulus avec la colorbox 
+    * `$("a.gallery").colorbox();`
+* Configurer la colorbox en y ajoutant des options telque [Liste des options possibles](http://www.jacklmoore.com/colorbox/) : 
+    * current, previous, next, close, title
+        * Représente les boutons et informations se trouvant en bas de la gallery
+    * maxWidth, MaxHeight
+        * Définit la taille maximale
+    * scalePhotos
+        * INdique si les image peuvent être redimensionnées ou non
 
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
