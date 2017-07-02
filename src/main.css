@@ -33,17 +33,13 @@ nav {
     margin-top: 10%;
 }
 
-.gmaps {
-    overflow: hidden;
-    width: 100%;
-    height: 600px;
-    border: 1px solid #0D47A1;
-    margin-bottom: 50px;
-}
-
 #cboxClose, #cboxNext, #cboxPrevious, #cboxCurrent {
     border: 1px;
     margin: 0 0 0 0;
     padding: 5px 5px 5px 5px;
     align-content: center;
+}
+
+#mark {
+    padding-bottom: 300px;
 }

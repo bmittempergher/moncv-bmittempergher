@@ -1,6 +1,8 @@
 # moncv-bmittem
 
-> Ce projet est ...
+Ce projet a été réalisé dans le cadre du cours "**Projet de technologie WEB de présentation**" de la Haute école de gestion de Neuchâtel par Bastien Mittempergher de la classe IG16-TP.
+
+Il consiste en un curriculum vitae réalisé en html/css avec un framework et l'ajout d'élément JavaScript via jQuery et deux plugin (chart.js et jQuery-colorbox). 
 
 ## Outils
 
@@ -204,13 +206,16 @@ Il permet de visualiser les images d'un même groupe dans une gallerie navigable
     * Pour ce plugin contrairement à celui vu précédemment, les éléments HTML sont juste ciblés à l'aide de la class `gallery` et non-remplacés à l'aide de fonctions JavaScript.
 * Cibler les éléments voulus avec la colorbox 
     * `$("a.gallery").colorbox();`
-* Configurer la colorbox en y ajoutant des options telque [Liste des options possibles](http://www.jacklmoore.com/colorbox/) : 
+* Configurer la colorbox en y ajoutant des options telque ([Liste des options possibles](http://www.jacklmoore.com/colorbox/)): 
     * current, previous, next, close, title
         * Représente les boutons et informations se trouvant en bas de la gallery
     * maxWidth, MaxHeight
         * Définit la taille maximale
     * scalePhotos
-        * INdique si les image peuvent être redimensionnées ou non
+        * Indique si les images peuvent être redimensionnées ou non
 
+### Contact
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Auteur : Bastien Mittempergher
+
+Email : bastien.mittempergher@he-arc.ch
